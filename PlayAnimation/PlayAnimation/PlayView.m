@@ -48,6 +48,8 @@
 
 - (void)addLineLayer {
     CAShapeLayer *leftLineLayer = [[CAShapeLayer alloc] init];
+    leftLineLayer.lineCap = kCALineCapRound;
+    leftLineLayer.lineJoin = kCALineJoinRound;
     leftLineLayer.strokeColor = [UIColor greenColor].CGColor;
     UIBezierPath *leftPath = [[UIBezierPath alloc] init];
     [leftPath moveToPoint:CGPointMake(45, 30)];
@@ -59,6 +61,8 @@
     [leftLineLayer addAnimation:[self lineAnimationFrom:@0.0 to:@1.0] forKey:nil];
     
     CAShapeLayer *rightLayer = [[CAShapeLayer alloc] init];
+    rightLayer.lineCap = kCALineCapRound;
+    rightLayer.lineJoin = kCALineJoinRound;
     rightLayer.strokeColor = [UIColor greenColor].CGColor;
     UIBezierPath *rightPath = [[UIBezierPath alloc] init];
     [rightPath moveToPoint:CGPointMake(70, 90)];

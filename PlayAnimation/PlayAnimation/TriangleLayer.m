@@ -21,6 +21,8 @@
     if (self) {
         self.strokeColor = [UIColor greenColor].CGColor;
         self.path = self.anglePath.CGPath;
+        self.lineCap = kCALineCapRound;
+        self.lineJoin = kCALineJoinRound;
         self.lineWidth = 6;
     }
     return self;
